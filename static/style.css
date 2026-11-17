@@ -1,0 +1,156 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #0b100e;
+    --sidebar: #101713;
+    --card: #151e19;
+    --border: #2b3932;
+    --text: #f4f7f4;
+    --muted: #a2b0a7;
+    --accent: #b8f34a;
+    --accent-hover: #d0ff72;
+}
+
+/* Global */
+html, body, .stApp {
+    font-family: "AdobeClean", "Inter", Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.stApp {
+    background: var(--bg);
+}
+
+.block-container {
+    max-width: 1200px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Header */
+[data-testid="stHeader"] {
+    background: rgba(11, 16, 14, 0.95);
+}
+
+h1, h2, h3, h4 {
+    color: var(--text) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.5px;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background: var(--sidebar);
+    border-right: 1px solid var(--border);
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: white !important;
+}
+
+/* Buttons */
+.stButton > button {
+    background: var(--accent) !important;
+    color: #10170d !important;
+    border: 1px solid var(--accent) !important;
+    border-radius: 10px !important;
+    min-height: 44px;
+    font-weight: 700 !important;
+    transition: all 0.2s ease;
+}
+
+.stButton > button:hover {
+    background: var(--accent-hover) !important;
+    border-color: var(--accent-hover) !important;
+    transform: translateY(-2px);
+}
+
+/* Inputs */
+.stTextInput input,
+.stNumberInput input,
+.stTextArea textarea {
+    background: #17201c !important;
+    color: white !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 9px !important;
+}
+
+/* Selectbox */
+[data-baseweb="select"] > div {
+    background: #17201c !important;
+    border-color: var(--border) !important;
+    color: white !important;
+    border-radius: 9px !important;
+}
+
+/* Metrics */
+[data-testid="stMetric"] {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 18px;
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--muted) !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: var(--accent) !important;
+    font-weight: 800 !important;
+}
+
+/* Alerts */
+[data-testid="stAlert"] {
+    border-radius: 11px;
+}
+
+/* Dividers */
+hr {
+    border-color: var(--border) !important;
+}
+
+/* Progress bar */
+.stProgress > div > div > div {
+    background-color: var(--accent) !important;
+}
+
+/* Camera and images */
+[data-testid="stImage"] img {
+    border: 1px solid var(--border);
+    border-radius: 13px;
+}
+
+/* Captions */
+[data-testid="stCaptionContainer"] {
+    color: var(--muted);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #405247;
+    border-radius: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .block-container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.7rem !important;
+    }
+}
